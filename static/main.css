@@ -4,7 +4,7 @@
 
 :root {
     --base-max-width: 960px;
-    --col-main: yellowgreen;
+    --col-main: orange;
     --col-back: rgb(10, 20, 30);
     --col-whit: rgb(210, 220, 230);
 }
@@ -19,7 +19,7 @@ body {
     font-family: Roboto;
     color: var(--col-whit);
     background-color: var(--col-back);
-    padding: 2rem;
+    padding: 4rem;
 }
 
 a {
@@ -52,19 +52,34 @@ h6 {
 small {
     font-size: .833rem;
 }
+h1:not(:last-child),h2:not(:last-child),
+h3:not(:last-child),h4:not(:last-child),
+h5:not(:last-child),h6:not(:last-child) {
+    margin-bottom: 2rem;
+}
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    color: rgba(255, 255, 255, .3);
+}
+
 /* #endregion */
 
 /* #region NAV */
 nav {
-    background-color: rgba(255, 255, 255, .1);
-    padding: 1rem;
+    background-color: rgba(255, 255, 255, .05);
+    padding: 1rem 1.5rem 1rem 1rem;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     width: fit-content;
     border-radius: 1rem;
     margin-bottom: 2rem;
+    align-items: center;
 }
-
+.logo {
+    width: 2rem;
+    height: 2rem;
+}
 nav a {
     color: var(--col-whit);
     text-decoration: none;
@@ -76,4 +91,47 @@ nav a:hover {
     color: var(--col-main);
     text-decoration: none;
 }
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* #endregion */
+
+.ava {
+    max-width: 10rem;
+    max-height: 10rem;
+    aspect-ratio: 1/1;
+    border-radius: 5rem;
+}
+.card {
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, .05);
+    padding: 2rem;
+    display: block;
+}
+.inline.card {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inline.card span {
+    margin-bottom: 0.5rem;
+}
+.inline-card-group {
+    display: inline-flex;
+    gap: 1rem;
+}
+
+.cols2 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.cols2 * {
+    flex: 1;
+}
+.hero {
+    margin-top: 6rem;
+    margin-bottom: 12rem;
+}
