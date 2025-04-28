@@ -114,6 +114,7 @@ nav a:hover {
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: left;
 }
 .inline.card span {
     margin-bottom: 0.5rem;
@@ -134,4 +135,31 @@ nav a:hover {
 .hero {
     margin-top: 6rem;
     margin-bottom: 12rem;
+    text-align: center;
+}
+
+.social {
+    text-align: center;
+}
+
+.social svg {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--col-whit);
+    transition: fill .3s ease-in-out;
+}
+
+.social svg:hover {
+    fill: var(--col-main);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    .hero .inline-card-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    .hero {margin-bottom: 6rem;}
 }
